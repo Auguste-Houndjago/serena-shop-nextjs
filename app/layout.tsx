@@ -1,4 +1,5 @@
 import './globals.css'
+
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Providers from '@/components/Providers'
@@ -6,7 +7,13 @@ import DrawerButton from '@/components/DrawerButton'
 import Sidebar from '@/components/Sidebar'
 import Header from '@/components/header/Header'
 
-const inter = Inter({ subsets: ['latin'] })
+import { Inter as FontSans } from "next/font/google"
+import { cn } from '@/lib/utils'
+
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+})
 
 export const metadata: Metadata = {
   title: 'Next Amazona V2',
@@ -20,7 +27,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable
+        )}>
         <Providers>
           <div className="drawer">
             <DrawerButton />

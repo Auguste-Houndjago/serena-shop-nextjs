@@ -1,5 +1,6 @@
 'use client'
 
+import WhatsAppButton from '@/components/WhatsAppButton'
 import useCartService from '@/lib/hooks/useCartStore'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -86,13 +87,24 @@ export default function CartDetails() {
                       {itemsPrice}
                     </div>
                   </li>
-                  <li>
+
+                  <li className='flex flex-col justify-center align-center gap gap-y-2'>
                     <button
                       onClick={() => router.push('/shipping')}
                       className="btn btn-primary w-full"
                     >
                       Proceed to Checkout
                     </button>
+
+                    <span className='border border-neutral-200 flex flex-col items-center'>
+                    <WhatsAppButton />
+                    <p className='font-black px-4 '>contactez sur whatsapp</p>
+                      {itemsPrice}
+                  </span>
+
+                    
+
+
                   </li>
                 </ul>
               </div>

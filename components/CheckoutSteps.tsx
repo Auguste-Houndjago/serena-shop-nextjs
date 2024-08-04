@@ -14,6 +14,7 @@ const CheckoutSteps = ({ current = 0 }) => {
         )
       )}
     </ul>
+    
   )
 }
 export default CheckoutSteps

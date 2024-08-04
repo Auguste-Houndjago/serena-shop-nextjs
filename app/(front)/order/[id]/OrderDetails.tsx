@@ -33,6 +33,7 @@ export default function OrderDetails({
 
   const { data: session } = useSession()
   console.log(session)
+  
   function createPayPalOrder() {
     return fetch(`/api/orders/${orderId}/create-paypal-order`, {
       method: 'POST',
