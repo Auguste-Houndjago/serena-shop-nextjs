@@ -20,6 +20,8 @@ const productSchema = new mongoose.Schema(
   }
 )
 
+productSchema.index({ slug: 1 }, { unique: true })
+
 const ProductModel =
   mongoose.models.Product || mongoose.model('Product', productSchema)
 

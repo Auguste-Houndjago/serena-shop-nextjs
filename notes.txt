@@ -1,5 +1,16 @@
 
 
+
+  } catch (error:any) {
+    if (error.code === 11000) {
+      console.warn(`Produit avec le slug "${Products.name}" existe déjà. Mise à jour effectuée.`)
+    } else {
+      console.error(`Erreur lors de l'insertion/mise à jour du produit ${Products.name}:`, error)
+    }
+  }
+
+
+
 tailwind conf:
 import type { Config } from 'tailwindcss'
 

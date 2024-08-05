@@ -12,6 +12,15 @@ const nextConfig = {
       },
     ],
   },
+
+  async rewrites() {
+    return [
+      {
+        source: '/api/products/seed',
+        destination: '/api/products/seed',
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig
