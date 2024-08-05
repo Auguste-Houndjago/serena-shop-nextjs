@@ -71,7 +71,7 @@ export default function CartDetails() {
                         +
                       </button>
                     </td>
-                    <td>${item.price}</td>
+                    <td>{item.price}FCFA</td>
                   </tr>
                 ))}
               </tbody>
@@ -79,18 +79,18 @@ export default function CartDetails() {
           </div>
           <div>
             <div className="card bg-base-300">
-              <div className="card-body">
+              <div className="card-body px-4">
                 <ul>
                   <li>
-                    <div className="pb-3 text-xl">
-                      Subtotal ({items.reduce((a, c) => a + c.qty, 0)}) : $
-                      {itemsPrice}
+                    <div className="pb-4 flex justify-center text-md">
+                      Subtotal ({items.reduce((a, c) => a + c.qty, 0)}) :
+                      {itemsPrice} FCFA
                     </div>
                   </li>
 
                   <li className='flex flex-col justify-center align-center gap gap-y-2'>
                     <button
-                      onClick={() => router.push('/shipping')}
+                      onClick={() => router.push('/payment')}
                       className="btn btn-primary w-full"
                     >
                       Proceed to Checkout
@@ -98,8 +98,8 @@ export default function CartDetails() {
 
                     <span className='border border-neutral-200 flex flex-col items-center'>
                     <WhatsAppButton />
-                    <p className='font-black px-4 '>contactez sur whatsapp</p>
-                      {itemsPrice}
+                    <p className='font-black px-4 w-full border border-transparent'>contactez sur whatsapp</p>
+                    
                   </span>
 
                     
