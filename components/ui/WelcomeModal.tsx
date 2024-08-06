@@ -22,17 +22,20 @@ export function WelcomeModal() {
   return (
     <div className="pt-10 pb-8 flex items-center justify-center">
       <Modal>
-        <ModalTrigger className="bg-gray-800 hover:scale-y-105 transition-transform  py-8 dark:bg-white dark:text-black text-white flex justify-center group/modal-btn  border-2 border-neutral-950 border-input  shadow-sm  hover:text-accent-foreground   
+        <ModalTrigger className="bg-gray-800 hover:scale-y-105 transition-transform  py-8 dark:bg-white dark:text-black text-white flex justify-center group/modal-btn  border-2 border-black border-input  shadow-sm  hover:text-accent-foreground   image
         
       
         ">
-          <span className="group-hover/modal-btn:translate-x-80 text-center transition duration-500">
+     
+          <span className="group-hover/modal-btn:translate-x-80 text-center transition duration-500 dark:bg-white dark:text-black">
           <h1 className=" overflow-hidden whitespace-nowrap border-r-4 pr-5 " >Bienvenue sur Serena Shop </h1>
            
           </span>
-          <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
+          <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-indigo-700 z-20">
+
           <GiGreenPower className="w-8 h-8" />
           </div>
+      
         </ModalTrigger>
         <ModalBody>
           <ModalContent>
