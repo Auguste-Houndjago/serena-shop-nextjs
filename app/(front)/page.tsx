@@ -26,7 +26,7 @@ export default async function Home() {
             className="carousel-item relative w-full"
           >
             <Link href={`/product/${product.slug}`}>
-              <img src={product.banner} className="w-full" alt={product.name} />
+              <img src={product.banner} className="w-[400px] " alt={product.name} />
             </Link>
 
             <div
