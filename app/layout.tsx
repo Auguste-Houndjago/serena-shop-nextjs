@@ -9,6 +9,7 @@ import Header from '@/components/header/Header'
 
 import { Inter as FontSans } from "next/font/google"
 import { cn } from '@/lib/utils'
+import { WelcomeModal } from '@/components/ui/WelcomeModal'
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -37,6 +38,7 @@ export default function RootLayout({
             <div className="drawer-content">
               <div className="min-h-screen flex flex-col">
                 <Header />
+                <div><WelcomeModal/></div>
                 {children}
                 <footer className="footer footer-center p-4 bg-base-300 text-base-content">
                   <p>

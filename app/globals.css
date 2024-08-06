@@ -107,3 +107,8 @@
 .primary-color {
   color: var(--primary);
 }
+
+
+.plantback{
+  background-image: url("/public/images/serena-shop.png");
+}

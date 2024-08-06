@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header>
       <nav>
-        <div className="navbar justify-between bg-base-300">
+        <div className="navbar border border-gray-500 hover:border-y-yellow-400 shadow-gray-400 justify-between bg-base-300">
           <div>
             <label htmlFor="my-drawer" className="btn btn-square btn-ghost">
               <svg
