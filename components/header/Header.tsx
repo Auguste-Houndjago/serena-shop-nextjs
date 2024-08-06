@@ -31,7 +31,7 @@ const Header = () => {
           </div>
 
 
-          <div className='hidden lg:flex rounded-xl border p-1 gap-2 flex-row justify-center items-center border-black'>
+          <div className='hidden lg:flex rounded-xl border p-1 gap-2 flex-row justify-center items-center border-transparent'>
           <Link className='translate-y-1' href="/"> 
           <LordIcon 
         src="https://cdn.lordicon.com/eiekfffz.json"
