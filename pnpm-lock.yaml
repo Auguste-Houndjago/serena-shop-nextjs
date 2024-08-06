@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@lordicon/element':
+        specifier: ^1.8.0
+        version: 1.8.0
+      '@lordicon/react':
+        specifier: ^1.8.0
+        version: 1.8.0(lottie-web@5.12.2)(react@18.2.0)
       '@paypal/react-paypal-js':
         specifier: ^8.1.3
         version: 8.1.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -26,6 +32,15 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      framer-motion:
+        specifier: ^11.3.21
+        version: 11.3.21(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      lord-icon-element:
+        specifier: ^4.1.2
+        version: 4.1.2
+      lottie-web:
+        specifier: ^5.12.2
+        version: 5.12.2
       lucide-react:
         specifier: ^0.424.0
         version: 0.424.0(react@18.2.0)
@@ -53,6 +68,9 @@ importers:
       react-hot-toast:
         specifier: ^2.4.1
         version: 2.4.1(csstype@3.1.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-icons:
+        specifier: ^5.2.1
+        version: 5.2.1(react@18.2.0)
       swr:
         specifier: ^2.2.4
         version: 2.2.4(react@18.2.0)
@@ -175,6 +193,27 @@ packages:
 
   '@kurkle/color@0.3.2':
     resolution: {integrity: sha512-fuscdXJ9G1qb7W8VdHi+IwRqij3lBkosAm4ydQtEmbY58OzHXqQhvlxqEkoz0yssNVn38bcpRWgA9PP+OGoisw==}
+
+  '@lordicon/element@1.8.0':
+    resolution: {integrity: sha512-oEvRQVYXo5mHejJezHv74WLE7zryWML5UWjVAGeeaX4YrMZA0RedpqqJ+FbL0NuUCAV0VQiR51pe8tmps3kFeg==}
+
+  '@lordicon/helpers@1.8.0':
+    resolution: {integrity: sha512-zMrM7hABgOWjBphnaiSg7wE8aAaoi/CO0SQYB06T3F8SDB0DEDfWhbWIHQ//emUSajOb3o+N6IJaGkf9VbTQLg==}
+
+  '@lordicon/react@1.8.0':
+    resolution: {integrity: sha512-Ky7qr5IWO5HEu+umNZAHsMDAKCqDLgQNuqrTUyOJBhWGfAJOil4tVwaOmEezkPJcKem4h8/BKM44vQzB+u/+aQ==}
+    peerDependencies:
+      lottie-react-native: '*'
+      lottie-web: '*'
+      react: '*'
+      react-native: '*'
+    peerDependenciesMeta:
+      lottie-react-native:
+        optional: true
+      lottie-web:
+        optional: true
+      react-native:
+        optional: true
 
   '@mongodb-js/saslprep@1.1.1':
     resolution: {integrity: sha512-t7c5K033joZZMspnHg/gWPE4kandgc2OxE74aYOtGKfgB9VPuVJPix0H6fhmm2erj5PBJ21mqcx34lpIGtUCsQ==}
@@ -809,6 +848,20 @@ packages:
   fraction.js@4.3.7:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
 
+  framer-motion@11.3.21:
+    resolution: {integrity: sha512-D+hfIsvzV8eL/iycld4K+tKlg2Q2LdwnrcBEohtGw3cG1AIuNYATbT5RUqIM1ndsAk+EfGhoSGf0UaiFodc5Tw==}
+    peerDependencies:
+      '@emotion/is-prop-valid': '*'
+      react: ^18.0.0
+      react-dom: ^18.0.0
+    peerDependenciesMeta:
+      '@emotion/is-prop-valid':
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
+
   fs.realpath@1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
 
@@ -1121,6 +1174,14 @@ packages:
   loose-envify@1.4.0:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
     hasBin: true
+
+  lord-icon-element@4.1.2:
+    resolution: {integrity: sha512-h9wnAn8DHouWerICgZxZnzCsoUic+1dfQznMtLNIMm8j7goqxS4INGNjo7+Wv/54ixlmO4rfJPPkCwaF5jOlGQ==}
+    engines: {node: '>=16.0.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+
+  lottie-web@5.12.2:
+    resolution: {integrity: sha512-uvhvYPC8kGPjXT3MyKMrL3JitEAmDMp30lVkuq/590Mw9ok6pWcFCwXJveo0t5uqYw1UREQHofD+jVpdjBv8wg==}
 
   lru-cache@10.1.0:
     resolution: {integrity: sha512-/1clY/ui8CzjKFyjdvwPWJUYKiFVXG2I2cY0ssG7h4+hwk+XOIX7ZSG9Q7TW8TW3Kp3BUSqgFWBLgL4PJ+Blag==}
@@ -1455,6 +1516,11 @@ packages:
     peerDependencies:
       react: '>=16'
       react-dom: '>=16'
+
+  react-icons@5.2.1:
+    resolution: {integrity: sha512-zdbW5GstTzXaVKvGSyTaBalt7HSfuK5ovrzlpyiWHAFXndXTdd/1hdDHI4xBM1Mn7YriT6aqESucFl9kEXzrdw==}
+    peerDependencies:
+      react: '*'
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
@@ -1889,6 +1955,19 @@ snapshots:
       '@jridgewell/sourcemap-codec': 1.4.15
 
   '@kurkle/color@0.3.2': {}
+
+  '@lordicon/element@1.8.0':
+    dependencies:
+      '@lordicon/helpers': 1.8.0
+
+  '@lordicon/helpers@1.8.0': {}
+
+  '@lordicon/react@1.8.0(lottie-web@5.12.2)(react@18.2.0)':
+    dependencies:
+      '@lordicon/helpers': 1.8.0
+      react: 18.2.0
+    optionalDependencies:
+      lottie-web: 5.12.2
 
   '@mongodb-js/saslprep@1.1.1':
     dependencies:
@@ -2659,6 +2738,13 @@ snapshots:
 
   fraction.js@4.3.7: {}
 
+  framer-motion@11.3.21(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+    dependencies:
+      tslib: 2.6.2
+    optionalDependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+
   fs.realpath@1.0.0: {}
 
   fsevents@2.3.3:
@@ -2975,6 +3061,10 @@ snapshots:
     dependencies:
       js-tokens: 4.0.0
 
+  lord-icon-element@4.1.2: {}
+
+  lottie-web@5.12.2: {}
+
   lru-cache@10.1.0: {}
 
   lru-cache@6.0.0:
@@ -3283,6 +3373,10 @@ snapshots:
       react-dom: 18.2.0(react@18.2.0)
     transitivePeerDependencies:
       - csstype
+
+  react-icons@5.2.1(react@18.2.0):
+    dependencies:
+      react: 18.2.0
 
   react-is@16.13.1: {}
 
