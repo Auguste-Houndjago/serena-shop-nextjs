@@ -2,6 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import Menu from './Menu'
 import { SearchBox } from './SearchBox'
+import LordIcon from '../ui/LordIcon'
 
 const Header = () => {
   return (
@@ -27,6 +28,19 @@ const Header = () => {
             <Link href="/" className="btn btn-ghost text-lg">
               Serena Shop
             </Link>
+          </div>
+
+
+          <div className='hidden lg:flex rounded-xl border p-1 gap-2 flex-row justify-center items-center border-black'>
+          <Link className='translate-y-1' href="/"> 
+          <LordIcon 
+        src="https://cdn.lordicon.com/eiekfffz.json"
+        trigger="hover"
+        size=""
+        
+       />
+      <script src="https://cdn.lordicon.com/lordicon.js"></script>
+       </Link>
           </div>
 
           <Menu />

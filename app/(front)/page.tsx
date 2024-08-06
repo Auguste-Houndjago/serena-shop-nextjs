@@ -6,6 +6,8 @@ import { convertDocToObj } from '@/lib/utils'
 import { Metadata } from 'next'
 import Link from 'next/link'
 
+
+
 export const metadata: Metadata = {
   title: process.env.NEXT_PUBLIC_APP_NAME || 'Serena Shop',
   description:
@@ -25,9 +27,12 @@ export default async function Home() {
             id={`slide-${index}`}
             className="carousel-item relative w-full"
           >
+      
+
             <Link href={`/product/${product.slug}`}>
               <img src={product.banner} className="w-[400px] " alt={product.name} />
             </Link>
+            
 
             <div
               className="absolute flex justify-between transform 

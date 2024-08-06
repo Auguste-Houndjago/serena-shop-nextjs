@@ -11,7 +11,22 @@ export function cn(...inputs: ClassValue[]) {
 
 
 
+// IconButton.d.ts
+import React from 'react';
 
+interface IconButtonProps {
+
+  src?:string;
+  trigger?: 'hover' | 'click' | 'loop' | 'loop-on-hover' | 'morph' | 'morph-two-way';
+  size?: string;
+  colors?:string;
+  stroke?:string;
+  style?:string;
+}
+
+declare const IconButton: React.FC<IconButtonProps>;
+
+export default IconButton;
 
 
 

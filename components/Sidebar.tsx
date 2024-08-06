@@ -12,12 +12,12 @@ const Sidebar = () => {
   if (!categories) return 'Loading...'
 
   return (
-    <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content  ">
+    <ul className="menu relative p-4 w-80 min-h-full bg-base-200 text-base-content ">
       <li>
         <h2 className="text-xl">Shop By Department</h2>
       </li>
       {categories.map((category: string) => (
-        <li key={category}>
+        <li key={category} className='z-50'>
           <Link href={`/search?category=${category}`} onClick={toggleDrawer}>
             {category}
           </Link>
