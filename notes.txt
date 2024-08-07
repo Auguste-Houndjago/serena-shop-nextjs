@@ -1,3 +1,46 @@
+
+
+
+
+#Products
+
+
+,
+  "name": "parfum  ",
+  "slug": "parfum1",
+  "category": "parfum",
+  "image": "/images/parfum1.jpeg",
+  "price": 3500,
+  "brand": "parfum",
+  "rating": 2.0,
+  "numReviews": 5,
+  "countInStock": 50,
+  "description": "tres bon parfum",
+  "isFeatured": true,
+  "banner": "/images/parfum2.jpeg",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2024-08-07T07:44:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-07T07:44:00.000Z"
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 lib
 
 
