@@ -9,15 +9,23 @@ export const GET = async (request: NextRequest) => {
   try {
     await dbConnect()
 
-    // Users
-    await UserModel.deleteMany()
-    await UserModel.insertMany(users)
+    // Insertion des utilisateurs avec gestion des doublons
+    const insertUserPromises = users.map(async (user) => {
+      try {
+        await UserModel.findOneAndUpdate(
+          { email: user.email }, // Utilisez un champ unique tel que l'email pour identifier l'utilisateur
+          user,
+          { upsert: true, new: true, runValidators: true }
+        )
+      } catch (error:any) {
+        console.error(`Erreur lors de l'insertion/mise à jour de l'utilisateur ${user.email}:`, error)
+      }
+    })
 
-    // Products
-    await ProductModel.deleteMany()
-    
+    await Promise.all(insertUserPromises)
+
     // Insertion des produits avec gestion des doublons
-    const insertPromises = products.map(async (product) => {
+    const insertProductPromises = products.map(async (product) => {
       try {
         await ProductModel.findOneAndUpdate(
           { slug: product.slug },
@@ -33,7 +41,7 @@ export const GET = async (request: NextRequest) => {
       }
     })
 
-    await Promise.all(insertPromises)
+    await Promise.all(insertProductPromises)
 
     return NextResponse.json({
       message: 'Seeded successfully',
