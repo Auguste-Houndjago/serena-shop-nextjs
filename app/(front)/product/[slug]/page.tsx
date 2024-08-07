@@ -7,7 +7,8 @@ import { Rating } from '@/components/products/Rating'
 
 import React, { Suspense } from 'react';
 import dynamic from 'next/dynamic';
-import Spinner from '@/components/ui/Spinner'
+
+import WhatsAppButton from '@/components/WhatsAppButton'
 
 const Loading = dynamic(() => import('@/components/ui/Spinner'), {
   loading: () => <div>Loading...</div>, // Affichez une indication de chargement
@@ -49,7 +50,7 @@ export default async function ProductDetails({
         </div>
 
         <Suspense fallback={<Loading/>} >
-          <div className="grid md:grid-cols-4 md:gap-3 relative">
+          <div className="flex space-x-4 justify-center gap mt-10  md:grid-cols-4 md:gap-3 relative">
           
             <div className="md:col-span-2 card-produit">
               <Image className='z-20 p-2 rounded-full imagP'
@@ -65,9 +66,8 @@ export default async function ProductDetails({
               ></Image>
             </div>
             <div>
-              <Spinner/>
             </div>
-            <div>
+            <div >
               <ul className="space-y-4">
                 <li>
                   <h1 className="text-xl">{product.name}</h1>
@@ -110,6 +110,10 @@ export default async function ProductDetails({
                           size: '',
                         }}
                       />
+                      <span className='flex gap-2 hover:cursor-pointer'>
+                      <h2 className='h-4 py-2 font-bold text-xl' >contactez </h2><WhatsAppButton/>
+                      </span>
+                   
                     </div>
                   )}
                 </div>

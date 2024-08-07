@@ -1,4 +1,7 @@
+'use client'
+
 import React from 'react';
+import { FaWhatsappSquare } from "react-icons/fa";
 
 const WhatsAppButton = () => {
   const phoneNumber = '+28898576682';
@@ -6,24 +9,11 @@ const WhatsAppButton = () => {
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
   return (
-    <button 
+    <button className='block hover:scale-105 border  bg-transparent'
       onClick={() => window.open(whatsappUrl, '_blank')}
-      style={{
-        backgroundColor: '#25D366',
-        color: 'white',
-        padding: '10px 20px',
-        border: 'none',
-        borderRadius: '5px',
-        cursor: 'pointer',
-        fontSize: '15px',
-        width:'100%',
-    
-        
-
-
-      }}
     >
-         WhatsApp
+      
+         <FaWhatsappSquare className='w-10 h-10 bg-green-600 text-[#5D366] rounded-sm  ' />
     </button>
   );
 };
