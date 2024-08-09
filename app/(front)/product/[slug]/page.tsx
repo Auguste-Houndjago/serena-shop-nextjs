@@ -50,45 +50,49 @@ export default async function ProductDetails({
         </div>
 
         <Suspense fallback={<Loading/>} >
-          <div className="flex space-x-4 justify-center gap mt-10  md:grid-cols-4 md:gap-3 relative">
+          <div className="grid space-x-4 justify-center gap mt-10  md:grid-cols-4 lg:grid-cols-2 md:gap-2 relative mb-4 ">
           
-            <div className="md:col-span-2 card-produit">
-              <Image className='z-20 p-2 rounded-full imagP'
-                src={product.image}
-                alt={product.name}
-                width={640}
-                height={640}
-                sizes="100vw"
-                style={{
-                  width: '400px',
-                  height: 'auto',
-                }}
-              ></Image>
+            <div className='flex justify-center flex-col '>
+              <div className="md:col-span-2 card-produit">
+                <Image className='z-20 p-2 rounded-full imagP'
+                  src={product.image}
+                  alt={product.name}
+                  width={640}
+                  height={640}
+                  sizes="100vw"
+                  style={{
+                    width: '400px',
+                    height: 'auto',
+                  }}
+                ></Image>
+              </div>
+              <div>
+              </div>
+              <div >
+                <ul className="space-y-4">
+                  <li>
+                    <h1 className="text-xl">{product.name}</h1>
+                  </li>
+                  <li>
+                    <Rating
+                      value={product.rating}
+                      caption={`${product.numReviews} ratings`}
+                    />
+                  </li>
+                  <li> {product.brand}</li>
+                  <li>
+                    <div className="divider"></div>
+                  </li>
+                  <li>
+                    Description: <p>{product.description}</p>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div>
-            </div>
+
+            
             <div >
-              <ul className="space-y-4">
-                <li>
-                  <h1 className="text-xl">{product.name}</h1>
-                </li>
-                <li>
-                  <Rating
-                    value={product.rating}
-                    caption={`${product.numReviews} ratings`}
-                  />
-                </li>
-                <li> {product.brand}</li>
-                <li>
-                  <div className="divider"></div>
-                </li>
-                <li>
-                  Description: <p>{product.description}</p>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <div className="card  bg-base-300 shadow-xl mt-3 md:mt-0">
+              <div className="card bg-base-300 shadow-xl mt-3 md:mt-1 md:m-2 ">
                 <div className="card-body">
                   <div className="mb-2 flex justify-between">
                     <div>Price</div>
@@ -119,7 +123,9 @@ export default async function ProductDetails({
                 </div>
               </div>
             </div>
+
           </div>
+
         </Suspense>
     </div>
     </>
