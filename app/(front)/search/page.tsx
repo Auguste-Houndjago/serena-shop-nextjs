@@ -6,15 +6,15 @@ import Link from 'next/link'
 const sortOrders = ['newest', 'lowest', 'highest', 'rating']
 const prices = [
   {
-    name: '$1 to $50',
+    name: '500 F CFA to 1000 F CFA',
     value: '1-50',
   },
   {
-    name: '$51 to $200',
+    name: '1000 F CFA to 5000 F CFA',
     value: '51-200',
   },
   {
-    name: '$201 to $1000',
+    name: '5000 F CFA to 10000 F CFA',
     value: '201-1000',
   },
 ]
